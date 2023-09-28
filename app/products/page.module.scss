@@ -1,0 +1,97 @@
+.productOverviewContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .productPageHeader {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    background-image: url(../../public/images/productsHeader.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    h1 {
+      margin-top: 8px;
+      font-family: var(--title-font);
+      color: var(--primary-color);
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      font-style: italic;
+    }
+  }
+
+  .categoryContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 32px 120px 0px;
+
+    .filterOptions {
+      cursor: pointer;
+
+      select {
+        padding: 4px 8px;
+        border: 1px solid var(--primary-color);
+        border-radius: 5px;
+        background: transparent;
+
+        option {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .productCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+    margin: 60px 120px;
+
+    .productCard {
+      width: 100%;
+      border-radius: 5px;
+      overflow: hidden;
+      border: 0.5px solid var(--primary-color);
+
+      &:hover {
+        transform: scale(1.05);
+        transition: transform 0.5s ease-in-out;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 8px 4px 8px;
+
+        .categoryTitle {
+          text-transform: uppercase;
+          font-size: 0.65rem;
+          color: var(--primary-color);
+        }
+
+        div {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .productName {
+            font-size: 1rem;
+          }
+
+          .productPrice {
+            font-size: 1.15rem;
+          }
+        }
+      }
+    }
+  }
+}

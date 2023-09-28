@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #faf8f4;
+  --primary-color: #a88755;
+  --secondary-color: #f3e9e0;
+
+  --primary-text-color: #1f1f1f;
+  --secondary-text-color: #6e6e6d;
+
+  --title-font: 'Playfair Display', sans-serif;
+  --body-font: 'Poppins', sans-serif;
+  --accent-font: 'Caveat', sans-serif;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: var(--body-font);
+  font-weight: 400;
+  color: var(--primary-text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--primary-color);
+  --swiper-navigation-size: 30px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+}
