@@ -1,3 +1,5 @@
+
+
 .searchBar {
   background-color: white;
   width: 250px;
@@ -6,26 +8,33 @@
   padding-left: 8px;
   position: fixed;
   right: 11%;
-  // display: none;
-  display: flex;
-  align-items: center;
-}
+  display: none;
 
-.searchInputBar {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
 
-  input {
+  &Open {
+    transition: 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+  }
+
+  .searchInputBar {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     width: 100%;
-    border: none;
-    height: 30px;
-    border-radius: 0px 50px 50px 0px;
-    padding-left: 8px;
-    font-size: 1rem;
+
+    input {
+      width: 100%;
+      border: none;
+      height: 30px;
+      border-radius: 0px 50px 50px 0px;
+      padding-left: 8px;
+      font-size: 1rem;
+
+
+    }
 
     button {
       background-color: transparent;
@@ -42,5 +51,7 @@
 
   .closeButton {
     font-size: 1rem;
+
+
   }
 }

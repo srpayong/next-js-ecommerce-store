@@ -9,7 +9,7 @@ export default function SearchBar() {
   const toggleMenu = () => setSearchBarOpen((prev) => !prev);
 
   return (
-    <main>
+    <>
       <div
         className={`${styles.searchBar} ${
           searchBarOpen ? styles[`searchBarOpen`] : {}
@@ -30,6 +30,6 @@ export default function SearchBar() {
           <CgClose className={styles.closeButton} />
         )}
       </button>
-    </main>
+    </>
   );
 }

@@ -1,7 +1,5 @@
 import sjson from 'secure-json-parse';
 
-// import { CookieQuantityItem } from '../app/products/[productId]/page';
-
 export function parseJson(stringifiedJson) {
   if (!stringifiedJson) return undefined;
 
@@ -11,3 +9,5 @@ export function parseJson(stringifiedJson) {
     return undefined;
   }
 }
+
+module.exports = { parseJson };

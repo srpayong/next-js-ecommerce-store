@@ -26,7 +26,7 @@ export default function NavBar() {
         }`}
       >
         {links.map(({ id, title, link }) => (
-          <Link href={link} key={`key-${id}`}>
+          <Link href={{ pathname: link }} key={`key-${id}`}>
             <li
               className={`${styles.navigationLink}, ${playfairDisplay.className}`}
             >
@@ -42,7 +42,6 @@ export default function NavBar() {
         ) : (
           <CgClose className={styles.closeButton} />
         )}
-        {Math.floor(Math.random() * 10)}
       </button>
     </nav>
   );

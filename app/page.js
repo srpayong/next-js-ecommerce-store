@@ -1,29 +1,40 @@
+import { Caveat, Playfair_Display } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
+import { AiFillStar } from 'react-icons/ai';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 import { getProducts } from '../database/products';
 import img1 from '../public/images/img1.jpeg';
 import img2 from '../public/images/img2.jpeg';
+import img3 from '../public/images/img3.jpeg';
+import img4 from '../public/images/img4.jpeg';
 import man1 from '../public/images/man1.jpeg';
-import GenerateButton from './GenerateButton';
-import LocalStorage from './LocalStorage';
+import man2 from '../public/images/man2.jpeg';
 import styles from './page.module.scss';
 
-export default function HomePage() {
-  const products = getProducts();
-  return (
-    <>
-      <section>
-        <GenerateButton />
-        <LocalStorage />
-        <h1>My home page</h1>
-        <Image src="/images/img1.jpeg" alt="man 1" width={400} height={400} />
-      </section>
+// export const dynamic = 'force-dynamic';
 
-      <section>
-        <div>
-          <h4>Featured Products</h4>
-          <Link href="/products">View Products</Link>
+export const metadata = {
+  title: { default: 'Bliss | Homepage' },
+  description: 'Dedicated for best quality handmade jewellery',
+};
+
+const caveat = Caveat({ subsets: ['latin'] });
+const playfairDisplay = Playfair_Display({ subsets: ['latin'] });
+
+export default async function Home() {
+  const products = await getProducts();
+  return (
+    <main>
+      <section className={styles.featuredProductsSection}>
+        <div className={styles.featuredProductsTitle}>
+          <h4 className={playfairDisplay.className}>Featured Products</h4>
+          <Link className={styles.viewAllButton} href="/products">
+            View All
+          </Link>
         </div>
+
         <div className={styles.featuredProductsCards}>
           {products.slice(8, 12).map((product) => {
             return (
@@ -60,39 +71,172 @@ export default function HomePage() {
           })}
         </div>
       </section>
-
-      <section>
-        <div>
+      {/* ========================= THE COLLECTION SECTION ========================= */}
+      <section className={styles.collectionSection}>
+        <div className={styles.collectionImageBox}>
           <Image
             className={styles.collectionImage1}
             src={img1}
-            alt="woman"
+            alt="image 1"
             priority={true}
           />
           <Image
             className={styles.collectionImage2}
             src={img2}
-            alt="man"
+            alt="image 2"
             priority={true}
           />
         </div>
-        <div>
-          <h2>Lorem ipsum</h2>
+
+        <div className={styles.collectionTextBox}>
+          <h2 className={caveat.className}>The Collection</h2>
           <hr />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
+            risus non vestibulum. Sed aliquam massa non libero tincidunt, non
+            condimentum nulla auctor. Curabitur varius odio a quam ullamcorper
+            volutpat. Pellentesque venenatis bibendum semper.
           </p>
           <Link className={styles.learnMoreLink} href="/#">
-            Learn more
+            Learn more <FaLongArrowAltRight />
           </Link>
         </div>
       </section>
-    </>
+      {/* ========================= ICONS SECTION ========================= */}
+      <section className={styles.highlightSection}>
+        <div className={styles.highlight}>
+          <Image
+            src={img3}
+            alt="image 3"
+            className={styles.highlightIcon}
+            priority={true}
+          />
+          <h6>Handmade</h6>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
+            risus non vestibulum. Sed aliquam massa non libero tincidunt, non
+            condimentum nulla auctor. Curabitur varius odio a quam ullamcorper
+            volutpat. Pellentesque venenatis bibendum semper.
+          </p>
+        </div>
+        <div className={styles.highlight}>
+          <Image
+            src={img4}
+            alt="image 4"
+            className={styles.highlightIcon}
+            priority={true}
+          />
+          <h6>Secure payment</h6>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
+            risus non vestibulum. Sed aliquam massa non libero tincidunt, non
+            condimentum nulla auctor. Curabitur varius odio a quam ullamcorper
+            volutpat. Pellentesque venenatis bibendum semper.
+          </p>
+        </div>
+        <div className={styles.highlight}>
+          <Image
+            src={man1}
+            alt="man 1"
+            className={styles.highlightIcon}
+            priority={true}
+          />
+          <h6>Free Shipping</h6>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
+            risus non vestibulum. Sed aliquam massa non libero tincidunt, non
+            condimentum nulla auctor. Curabitur varius odio a quam ullamcorper
+            volutpat. Pellentesque venenatis bibendum semper.
+          </p>
+        </div>
+        <div className={styles.highlight}>
+          <Image
+            src={man2}
+            alt="man 2"
+            className={styles.highlightIcon}
+            priority={true}
+          />
+          <h6>Order Tracking</h6>
+          <p>Lorem Ipsum</p>
+        </div>
+      </section>
+      {/* ========================= CATEGORY SECTION ========================= */}
+      <section className={styles.categorySection}>
+        <h2 className={playfairDisplay.className}>Shop by Category</h2>
+        <Link className={styles.viewallLink} href="/ProductsOverview">
+          View all
+        </Link>
+        <div className={styles.categoryCards}>
+          <div className={styles.categoryWomen}>
+            <p>Women</p>
+          </div>
+          <div className={styles.categoryMen}>
+            <p>Men</p>
+          </div>
+          <div className={styles.categoryKids}>
+            <p>Kids</p>
+          </div>
+          <div className={styles.categoryPurse}>
+            <p>Purse</p>
+          </div>
+        </div>
+      </section>
+      {/* ========================= TESTIMONIALS SECTION ========================= */}
+      <section className={styles.testimonialsSection}>
+        <h4>Reviews</h4>
+        <div className={styles.testimonials}>
+          <div className={styles.testimonialCard}>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              euismod risus non vestibulum. Sed aliquam massa non libero
+              tincidunt, non condimentum nulla auctor. Curabitur varius odio a
+              quam ullamcorper volutpat. Pellentesque venenatis bibendum semper.
+              Aliquam erat volutpat. Sed non odio eu nunc volutpat
+            </p>
+            <h6>Hello</h6>
+            <div>
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+            </div>
+          </div>
+          <div className={styles.testimonialCard}>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              euismod risus non vestibulum. Sed aliquam massa non libero
+              tincidunt, non condimentum nulla auctor. Curabitur varius odio a
+              quam ullamcorper volutpat. Pellentesque
+            </p>
+            <h6>Hello</h6>
+            <div>
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+            </div>
+          </div>
+          <div className={styles.testimonialCard}>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              euismod risus non vestibulum. Sed aliquam massa non libero
+              tincidunt, non condimentum nulla auctor. Curabitur varius odio a
+              quam ullamcorper volutpat. Pellentesque venenatis bibendum semper.
+              Aliquam erat volutpat. Sed non odio eu nunc volutpat
+            </p>
+            <h6>hello</h6>
+            <div>
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

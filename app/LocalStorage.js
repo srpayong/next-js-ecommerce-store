@@ -10,5 +10,3 @@ export default function LocalStorage() {
   }, []);
   return <div>{darkMode ? darkMode : 'false'} </div>;
 }
-
-// useEffect always exist in client's
