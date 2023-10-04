@@ -8,8 +8,8 @@
 // export const dynamic = 'force-dynamic';
 
 // export const metadata = {
-//   title: { default: 'Vida | Handmade Jewellery' },
-//   description: 'Dedicated for best quality handmade jewellery',
+//   title: { default: 'Bliss' },
+//   description: 'Lorem Ipsum',
 // };
 
 // type Props = {
@@ -38,9 +38,10 @@
 //               }}
 //             >
 //               <option value="">All Products</option>
-//               <option value="earrings">Earrings</option>
-//               <option value="necklace">Necklace</option>
-//               <option value="ring">Rings</option>
+//               <option value="women">Women</option>
+//               <option value="men">Men</option>
+//               <option value="kids">Kids</option>
+// {/* <option value="purse">Purse</option> */}
 //             </select>
 //           </div>
 //         </div>
@@ -57,7 +58,7 @@
 //                   data-test-id={`product-${product.id}`}
 //                 >
 //                   <Image
-//                     src={`/images/products/${product.name}.avif`}
+//                     src={`/images/products/${product.name}.jpeg`}
 //                     width={200}
 //                     height={200}
 //                     alt={product.name}

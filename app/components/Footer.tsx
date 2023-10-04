@@ -24,7 +24,7 @@ export default function Footer() {
             <AiOutlinePhone /> <p>+0123456789</p>
           </div>
           <div>
-            <AiOutlineMail /> <p>email@email.com</p>
+            <AiOutlineMail /> <p>hello@email.com</p>
           </div>
         </div>
         <div className={styles.companySocialLinks}>
@@ -33,18 +33,12 @@ export default function Footer() {
           <AiFillInstagram />
           <BsPinterest />
         </div>
-        <h6>
-          Hello
-          <Link href="https://github.com/srpf15" className={styles.creditLink}>
-            {' '}
-            --
-          </Link>
-        </h6>
       </div>
 
       <form className={styles.mailingList}>
-        <h3>Join our mailing list</h3>
-        <input placeholder="me@email.com" />
+        <h3>Become an insider</h3>
+        <p>Sign up for any future brand notifications.</p>
+        <input placeholder="Enter email" />
         <button>Subscribe</button>
       </form>
     </footer>

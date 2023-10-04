@@ -5,7 +5,7 @@ CREATE TABLE products (
   id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   name varchar(30) NOT NULL,
   type varchar(30) NOT NULL,
-  price integer NOT NULL,
+  price integer,
   description varchar(100) NOT NULL
 );
 
@@ -13,15 +13,15 @@ CREATE TABLE products (
 INSERT INTO products
   (name, type, price, description)
 VALUES
-( 'man1', 'Pullover', '35', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'),
-( 'man2','Jeans', '35', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'),
-( 'man3', 'Pants', '35', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'),
-( 'woman1', 'Sweater', '35', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'),
-( 'woman2', 'Purse', '35', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'),
-( 'woman3', 'Trousers', '35', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'),
-( 'kids1', 'LinenJumpsuit', '35', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'),
-( 'kids2', 'ShirtandPants', '35', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'),
-( 'kids3', 'PulloverandJoggers', '35', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor');
+( 'menpullover', 'Pullover', 35, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'),
+( 'menjeans','Jeans', 35, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'),
+( 'menpants', 'Pants', 35, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'),
+( 'womensweater', 'Sweater', 35, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'),
+( 'womenpurse', 'Purse', 35, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'),
+( 'womentrousers', 'Trousers', 35, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'),
+( 'kidsjumpsuit', 'LinenJumpsuit', 35, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'),
+( 'kidsshirtandpants', 'ShirtandPants', 35, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'),
+( 'kidspullandjog', 'PulloverandJoggers', 35, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor');
 
 
 -- Read products

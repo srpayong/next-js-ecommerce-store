@@ -20,8 +20,6 @@
   margin: 0px;
   z-index: 2;
 
-
-
   .navContainer {
     flex: 1;
 
@@ -29,7 +27,6 @@
       display: flex;
       gap: 24px;
       background-color: transparent;
-
 
       .navigationLink {
         text-transform: uppercase;
@@ -61,13 +58,11 @@
           transform-origin: left;
           transform: scaleX(1);
         }
-
       }
     }
 
     .hamburgerIcon {
       display: none;
-
 
       .closeButton {
         z-index: 10;
@@ -83,7 +78,6 @@
     .logo {
       height: 40px;
       width: 70px;
-
     }
   }
 
@@ -94,7 +88,6 @@
     align-items: center;
     position: relative;
     gap: 16px;
-
 
     .cartIcon {
       cursor: pointer;
@@ -113,7 +106,6 @@
       right: -5%;
       transform: translate(-50%, -50%);
       font-size: 0.9rem;
-
     }
     .empty {
       display: none;

@@ -1,6 +1,7 @@
 import 'server-only';
 import { cache } from 'react';
 import { sql } from '../database/connect';
+import { Product } from '../migrations/00003-createTableProduct';
 
 // const products1 = [
 //   {
@@ -77,14 +78,6 @@ import { sql } from '../database/connect';
 //   },
 // ];
 
-type Product = {
-  id: number;
-  name: string;
-  type: string;
-  price: number;
-  description: string | null;
-};
-
 export const getProducts = cache(async () => {
   // postgres always returns an array
   const products = await sql<Product[]>`
@@ -95,6 +88,8 @@ export const getProducts = cache(async () => {
 });
 
 export const getProductById = cache(async (id: number) => {
+  // postgres always returns an array
+  console.log({ id });
   const [product] = await sql<Product[]>`
   SELECT * FROM products WHERE id = ${id}
   `;

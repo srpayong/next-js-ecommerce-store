@@ -16,7 +16,7 @@ export default function SearchBar() {
         }`}
       >
         <form className={styles.searchInputBar}>
-          <input placeholder="Search..." />
+          <input placeholder="Search" />
           <button>
             <BsSearch />
           </button>

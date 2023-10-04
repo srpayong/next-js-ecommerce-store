@@ -6,11 +6,10 @@ import { AiFillStar } from 'react-icons/ai';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import { getProducts } from '../database/products';
 import img1 from '../public/images/img1.jpeg';
-import img2 from '../public/images/img2.jpeg';
 import img3 from '../public/images/img3.jpeg';
 import img4 from '../public/images/img4.jpeg';
-import man1 from '../public/images/man1.jpeg';
-import man2 from '../public/images/man2.jpeg';
+import menjeans from '../public/images/menjeans.jpeg';
+import menpullover from '../public/images/menpullover.jpeg';
 import styles from './page.module.scss';
 
 // export const dynamic = 'force-dynamic';
@@ -44,7 +43,17 @@ export default async function Home() {
               >
                 <Link href={`/products/${product.id}`}>
                   <Image
-                    src={`/images/products/${product.name}.jpeg`}
+                    src={`/images/${product.name}.jpeg`}
+                    width={200}
+                    height={200}
+                    alt={product.name}
+                    priority={true}
+                    className={styles.productImage}
+                  />
+                </Link>
+                <Link href={`/products/${product.id}`}>
+                  <Image
+                    src={`/images/${product.name}.jpeg`}
                     width={200}
                     height={200}
                     alt={product.name}
@@ -76,14 +85,14 @@ export default async function Home() {
         <div className={styles.collectionImageBox}>
           <Image
             className={styles.collectionImage1}
-            src={img1}
-            alt="image 1"
+            src={img4}
+            alt="image 4"
             priority={true}
           />
           <Image
             className={styles.collectionImage2}
-            src={img2}
-            alt="image 2"
+            src={img1}
+            alt="image 1"
             priority={true}
           />
         </div>
@@ -111,13 +120,8 @@ export default async function Home() {
             className={styles.highlightIcon}
             priority={true}
           />
-          <h6>Handmade</h6>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
-            risus non vestibulum. Sed aliquam massa non libero tincidunt, non
-            condimentum nulla auctor. Curabitur varius odio a quam ullamcorper
-            volutpat. Pellentesque venenatis bibendum semper.
-          </p>
+          <h6>Ref stores</h6>
+          <p>We're all over the place</p>
         </div>
         <div className={styles.highlight}>
           <Image
@@ -126,38 +130,28 @@ export default async function Home() {
             className={styles.highlightIcon}
             priority={true}
           />
-          <h6>Secure payment</h6>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
-            risus non vestibulum. Sed aliquam massa non libero tincidunt, non
-            condimentum nulla auctor. Curabitur varius odio a quam ullamcorper
-            volutpat. Pellentesque venenatis bibendum semper.
-          </p>
+          <h6>We're Climate Neutral certified</h6>
+          <p>And commited to the planet</p>
         </div>
         <div className={styles.highlight}>
           <Image
-            src={man1}
-            alt="man 1"
+            src={menpullover}
+            alt="men pullover"
             className={styles.highlightIcon}
             priority={true}
           />
-          <h6>Free Shipping</h6>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
-            risus non vestibulum. Sed aliquam massa non libero tincidunt, non
-            condimentum nulla auctor. Curabitur varius odio a quam ullamcorper
-            volutpat. Pellentesque venenatis bibendum semper.
-          </p>
+          <h6>Customer love</h6>
+          <p>We got you via email or text</p>
         </div>
         <div className={styles.highlight}>
           <Image
-            src={man2}
-            alt="man 2"
+            src={menjeans}
+            alt="men jeans"
             className={styles.highlightIcon}
             priority={true}
           />
-          <h6>Order Tracking</h6>
-          <p>Lorem Ipsum</p>
+          <h6>Free shipping</h6>
+          <p>Free returns on qualifying orders</p>
         </div>
       </section>
       {/* ========================= CATEGORY SECTION ========================= */}
@@ -188,12 +182,9 @@ export default async function Home() {
           <div className={styles.testimonialCard}>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              euismod risus non vestibulum. Sed aliquam massa non libero
-              tincidunt, non condimentum nulla auctor. Curabitur varius odio a
-              quam ullamcorper volutpat. Pellentesque venenatis bibendum semper.
-              Aliquam erat volutpat. Sed non odio eu nunc volutpat
+              euismod risus non vestibulum. Sed aliqua
             </p>
-            <h6>Hello</h6>
+
             <div>
               <AiFillStar />
               <AiFillStar />
@@ -206,10 +197,7 @@ export default async function Home() {
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
               euismod risus non vestibulum. Sed aliquam massa non libero
-              tincidunt, non condimentum nulla auctor. Curabitur varius odio a
-              quam ullamcorper volutpat. Pellentesque
             </p>
-            <h6>Hello</h6>
             <div>
               <AiFillStar />
               <AiFillStar />
@@ -222,11 +210,8 @@ export default async function Home() {
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
               euismod risus non vestibulum. Sed aliquam massa non libero
-              tincidunt, non condimentum nulla auctor. Curabitur varius odio a
-              quam ullamcorper volutpat. Pellentesque venenatis bibendum semper.
-              Aliquam erat volutpat. Sed non odio eu nunc volutpat
             </p>
-            <h6>hello</h6>
+
             <div>
               <AiFillStar />
               <AiFillStar />

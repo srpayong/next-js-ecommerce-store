@@ -23,7 +23,7 @@ export function CookieBanner() {
         areCookiesTermsAccepted ? style.closed : style.open
       }`}
     >
-      <div>Please accept terms and conditions</div>
+      <div>Accept all cookies</div>
       <button
         className={style.cookieAcceptButton}
         onClick={() => {
@@ -31,7 +31,7 @@ export function CookieBanner() {
           setAreCookiesTermsAccepted(true);
         }}
       >
-        accept
+        Accept
       </button>
     </div>
   );

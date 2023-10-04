@@ -12,8 +12,8 @@ import RemoveButton from './RemoveButton';
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-  title: { default: 'Vida | Handmade Jewellery' },
-  description: 'Dedicated for best quality handmade jewellery',
+  title: { default: 'Bliss' },
+  description: 'Lorem Ipsum',
 };
 
 export default async function CartPage() {

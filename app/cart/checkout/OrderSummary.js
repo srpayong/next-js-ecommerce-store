@@ -3,7 +3,7 @@ import { getProducts } from '../../../database/products';
 import { getCookie } from '../../../util/cookies';
 import { parseJson } from '../../../util/json';
 
-// import styles from '../checkout.module.scss';
+// import styles from './checkout.module.scss';
 
 export const dynamic = 'force-dynamic';
 
@@ -41,22 +41,20 @@ export default async function OrderSummary() {
         return (
           <div key={`product-div-${product.id}`}>
             <div>
+              <Image
+                src={`/images/products/${product.name}.jpeg`}
+                width={60}
+                height={60}
+                alt={product.name}
+              />
+            </div>
+            <div>
+              <p>
+                {product.name} <span>[{product.category}]</span>
+              </p>
               <div>
-                <Image
-                  src={`/images/products/${product.name}.avif`}
-                  width={60}
-                  height={60}
-                  alt={product.name}
-                />
-              </div>
-              <div>
-                <p>
-                  {product.name} <span>[{product.category}]</span>
-                </p>
-                <div>
-                  <p>Quantity: {product.quantity}</p>
-                  <p>€ {product.price}</p>
-                </div>
+                <p>Quantity: {product.quantity}</p>
+                <p>€ {product.price}</p>
               </div>
             </div>
             <div>€{subTotal}</div>
