@@ -1,15 +1,16 @@
-import { Caveat, Playfair_Display } from 'next/font/google';
+import { Playfair_Display } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { AiFillStar } from 'react-icons/ai';
+import { BiCurrentLocation } from 'react-icons/bi';
+import { CgCodeClimate } from 'react-icons/cg';
 import { FaLongArrowAltRight } from 'react-icons/fa';
+import { LiaShippingFastSolid } from 'react-icons/lia';
+import { RiCustomerService2Line } from 'react-icons/ri';
 import { getProducts } from '../database/products';
 import img1 from '../public/images/img1.jpeg';
-import img3 from '../public/images/img3.jpeg';
 import img4 from '../public/images/img4.jpeg';
-import menjeans from '../public/images/menjeans.jpeg';
-import menpullover from '../public/images/menpullover.jpeg';
 import styles from './page.module.scss';
 
 // export const dynamic = 'force-dynamic';
@@ -19,7 +20,6 @@ export const metadata = {
   description: 'Dedicated for best quality handmade jewellery',
 };
 
-const caveat = Caveat({ subsets: ['latin'] });
 const playfairDisplay = Playfair_Display({ subsets: ['latin'] });
 
 export default async function Home() {
@@ -98,7 +98,7 @@ export default async function Home() {
         </div>
 
         <div className={styles.collectionTextBox}>
-          <h2 className={caveat.className}>The Collection</h2>
+          <h2>Sweater weather is here</h2>
           <hr />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
@@ -106,7 +106,7 @@ export default async function Home() {
             condimentum nulla auctor. Curabitur varius odio a quam ullamcorper
             volutpat. Pellentesque venenatis bibendum semper.
           </p>
-          <Link className={styles.learnMoreLink} href="/#">
+          <Link className={styles.learnMoreLink} href="/products">
             Learn more <FaLongArrowAltRight />
           </Link>
         </div>
@@ -114,42 +114,22 @@ export default async function Home() {
       {/* ========================= ICONS SECTION ========================= */}
       <section className={styles.highlightSection}>
         <div className={styles.highlight}>
-          <Image
-            src={img3}
-            alt="image 3"
-            className={styles.highlightIcon}
-            priority={true}
-          />
+          <BiCurrentLocation />
           <h6>Ref stores</h6>
           <p>We're all over the place</p>
         </div>
         <div className={styles.highlight}>
-          <Image
-            src={img4}
-            alt="image 4"
-            className={styles.highlightIcon}
-            priority={true}
-          />
+          <CgCodeClimate />
           <h6>We're Climate Neutral certified</h6>
           <p>And commited to the planet</p>
         </div>
         <div className={styles.highlight}>
-          <Image
-            src={menpullover}
-            alt="men pullover"
-            className={styles.highlightIcon}
-            priority={true}
-          />
+          <RiCustomerService2Line />
           <h6>Customer love</h6>
           <p>We got you via email or text</p>
         </div>
         <div className={styles.highlight}>
-          <Image
-            src={menjeans}
-            alt="men jeans"
-            className={styles.highlightIcon}
-            priority={true}
-          />
+          <LiaShippingFastSolid />
           <h6>Free shipping</h6>
           <p>Free returns on qualifying orders</p>
         </div>

@@ -9,8 +9,6 @@ import getCartTotal from './getCartTotal';
 import { productData } from './productData';
 import RemoveButton from './RemoveButton';
 
-export const dynamic = 'force-dynamic';
-
 export const metadata = {
   title: { default: 'Bliss' },
   description: 'Lorem Ipsum',
@@ -28,7 +26,7 @@ export default async function CartPage() {
   return (
     <main>
       {productsInCart.length === 0 ? (
-        <h1 className={styles.emptyCart}>Your cart is empty 🛒</h1>
+        <h1 className={styles.emptyCart}>Your cart is empty</h1>
       ) : (
         <div className={styles.cartContainer}>
           <div className={styles.cartOverviewContainer}>
@@ -93,7 +91,7 @@ export default async function CartPage() {
           </div>
           <div className={styles.cartTotalContainer}>
             <div className={styles.cartTotalCard}>
-              <h3>Cart Total</h3>
+              <h3>Cart Total:</h3>
               <div
                 data-test-id="cart-total"
                 className={styles.grandTotalAmount}

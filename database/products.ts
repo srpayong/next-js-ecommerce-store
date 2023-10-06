@@ -1,7 +1,7 @@
 import 'server-only';
 import { cache } from 'react';
 import { sql } from '../database/connect';
-import { Product } from '../migrations/00003-createTableProduct';
+import { Product } from '../migrations/00000-createTableProduct';
 
 // const products1 = [
 //   {

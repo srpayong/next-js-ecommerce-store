@@ -1,5 +1,3 @@
-// import Image from 'next/image';
-// import img1 from '../../../../public/images/img1.jpeg';
 import styles from './thankYou.module.scss';
 
 export default function thankYouPage() {

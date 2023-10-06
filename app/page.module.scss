@@ -5,47 +5,34 @@
   position: relative;
   width: 100%;
 
-  .mySlider {
-    z-index: 1;
+  .textBox {
+    position: absolute;
+    top: 55%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    width: 600px;
 
-    .slider {
-      position: relative;
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 24px;
+    }
 
-      .sliderImage {
-        width: 100%;
-        height: 100%;
-      }
+    p {
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
 
-      .textBox {
-        position: absolute;
-        top: 55%;
-        left: 29%;
-        transform: translate(-50%, -50%);
-        width: 600px;
+    .productLink {
+      cursor: pointer;
+      padding: 4px 8px;
+      border: 1px solid var(--primary-color);
+      border-radius: 5px;
+      background-color: var(--primary-color);
+      color: var(--main-bg-color);
 
-        h1 {
-          font-size: 4rem;
-          margin-bottom: 24px;
-        }
-
-        p {
-          line-height: 1.5;
-          margin-bottom: 32px;
-        }
-
-        .productLink {
-          cursor: pointer;
-          padding: 4px 8px;
-          border: 1px solid var(--primary-color);
-          border-radius: 5px;
-          background-color: var(--primary-color);
-          color: var(--main-bg-color);
-
-          &:hover {
-            background-color: transparent;
-            color: black;
-          }
-        }
+      &:hover {
+        background-color: transparent;
+        color: black;
       }
     }
   }
@@ -165,9 +152,9 @@
 
     h2 {
       font-family: var(--title-font);
-      font-size: 4rem;
+      font-size: 3rem;
       font-style: italic;
-      font-weight: 400;
+      font-weight: 300;
     }
 
     p {

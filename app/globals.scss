@@ -35,17 +35,3 @@ a {
 li {
   list-style: none;
 }
-
-.swiper-button-prev,
-.swiper-button-next {
-  color: var(--primary-color);
-  --swiper-navigation-size: 30px;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background-color: var(--primary-color);
-}

@@ -15,6 +15,7 @@
     "dotenv-safe": "^8.2.0",
     "ley": "^0.8.1",
     "next": "latest",
+    "next-js-ecommerce-store": "link:",
     "postgres": "^3.3.5",
     "react": "latest",
     "react-cookie": "^6.1.1",

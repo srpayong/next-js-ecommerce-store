@@ -19,7 +19,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <div className={styles.topBanner}>Free Worldwide Shipping</div>
+        <div className={styles.topBanner}>
+          It's chilly outside, but our sale is heating up! 🔥
+        </div>
         <div className={styles.navigationBar}>
           <NavBar />
           <div className={styles.cartContainer}>

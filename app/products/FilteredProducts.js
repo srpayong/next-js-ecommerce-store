@@ -2,7 +2,7 @@
 // import Image from 'next/image';
 // import Link from 'next/link';
 // import { useState } from 'react';
-// // import { Product } from '../../migrations/1685200803-createTableProducts';
+// import { Product } from '../../migrations/00004-createTableProducts';
 // import styles from './page.module.scss';
 
 // export const dynamic = 'force-dynamic';

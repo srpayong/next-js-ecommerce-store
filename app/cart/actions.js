@@ -6,7 +6,7 @@ import { parseJson } from '../../util/json';
 
 // remove product from cart
 export async function removeItem(item) {
-  const productQuantityCookie = getCookie('cart'); // get the current cookies from the Request Headers
+  const productQuantityCookie = getCookie('cart'); // get the current cookies from Request Headers
   const productQuantities = !productQuantityCookie // parse the cookie
     ? []
     : parseJson(productQuantityCookie);

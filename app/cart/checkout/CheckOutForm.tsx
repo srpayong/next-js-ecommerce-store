@@ -85,7 +85,6 @@ export default function CheckOutForm() {
               className={styles.city}
               value={city}
               onChange={(event) => setCity(event.currentTarget.value)}
-              // required
             />
           </label>
           <label>
@@ -95,7 +94,6 @@ export default function CheckOutForm() {
               className={styles.city}
               value={postCode}
               onChange={(event) => setPostCode(event.currentTarget.value)}
-              // required
             />
           </label>
         </div>
@@ -132,7 +130,6 @@ export default function CheckOutForm() {
                 onChange={(event) => setMonth(event.currentTarget.value)}
                 data-test-id="checkout-credit-card"
                 className={`${styles.expiry} ${styles.expiryMonth}`}
-                // required
               />
             </label>
             <span>/</span>
@@ -145,7 +142,6 @@ export default function CheckOutForm() {
                 onChange={(event) => setYear(event.currentTarget.value)}
                 data-test-id="checkout-credit-card"
                 className={`${styles.expiry} ${styles.expiryYear}`}
-                // required
               />
             </label>
           </div>
