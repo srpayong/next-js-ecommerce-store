@@ -13,11 +13,9 @@ import img1 from '../public/images/img1.jpeg';
 import img4 from '../public/images/img4.jpeg';
 import styles from './page.module.scss';
 
-// export const dynamic = 'force-dynamic';
-
 export const metadata = {
   title: { default: 'Bliss | Homepage' },
-  description: 'Dedicated for best quality handmade jewellery',
+  description: 'Lorem Ipsum',
 };
 
 const playfairDisplay = Playfair_Display({ subsets: ['latin'] });
@@ -80,7 +78,7 @@ export default async function Home() {
           })}
         </div>
       </section>
-      {/* ========================= THE COLLECTION SECTION ========================= */}
+      {/* // THE COLLECTION SECTION */}
       <section className={styles.collectionSection}>
         <div className={styles.collectionImageBox}>
           <Image
@@ -111,7 +109,7 @@ export default async function Home() {
           </Link>
         </div>
       </section>
-      {/* ========================= ICONS SECTION ========================= */}
+      {/*  ICONS SECTION */}
       <section className={styles.highlightSection}>
         <div className={styles.highlight}>
           <BiCurrentLocation />
@@ -134,10 +132,10 @@ export default async function Home() {
           <p>Free returns on qualifying orders</p>
         </div>
       </section>
-      {/* ========================= CATEGORY SECTION ========================= */}
+      {/* CATEGORY SECTION */}
       <section className={styles.categorySection}>
         <h2 className={playfairDisplay.className}>Shop by Category</h2>
-        <Link className={styles.viewallLink} href="/ProductsOverview">
+        <Link className={styles.viewallLink} href="/Products">
           View all
         </Link>
         <div className={styles.categoryCards}>
@@ -155,7 +153,7 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      {/* ========================= TESTIMONIALS SECTION ========================= */}
+      {/*  TESTIMONIALS SECTION */}
       <section className={styles.testimonialsSection}>
         <h4>Reviews</h4>
         <div className={styles.testimonials}>

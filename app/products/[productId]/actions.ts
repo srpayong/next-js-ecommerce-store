@@ -2,7 +2,6 @@
 
 import { cookies } from 'next/headers';
 import { getCookie } from '../../../util/cookies';
-// import { parseJson } from '../../../util/json';
 import { updateQuantity } from './updateQuantity';
 
 export default async function addToCart(productId: number, quantity: number) {

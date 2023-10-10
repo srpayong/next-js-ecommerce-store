@@ -11,7 +11,6 @@ export default function GenerateButton() {
       <button
         className={style.generateButton}
         onClick={() => {
-          // setCount(`#${Math.floor(Math.random() * 16777215).toString(16)}`);
           router.refresh();
         }}
       >
@@ -22,3 +21,5 @@ export default function GenerateButton() {
 }
 
 // // router to connect generated number to button-add to cart
+
+// setCount(`#${Math.floor(Math.random() * 16777215).toString(16)}`);

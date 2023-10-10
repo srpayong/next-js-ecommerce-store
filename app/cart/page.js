@@ -54,7 +54,7 @@ export default async function CartPage() {
                     <div>
                       <Link href={`/products/${product.id}`}>
                         <Image
-                          src={`/images/products/${product.name}.jpeg`}
+                          src={`/images/${product.name}.jpeg`}
                           width={80}
                           height={80}
                           className={styles.productImage}

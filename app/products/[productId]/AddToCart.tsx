@@ -1,10 +1,14 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import addToCart from './actions';
 import styles from './AddToCart.module.scss';
 
-function AddToCart(props) {
+type Props = {
+  productId: number;
+};
+
+export default function AddToCart(props: Props) {
   const [quantity, setQuantity] = useState('1');
   const router = useRouter();
 
@@ -15,7 +19,9 @@ function AddToCart(props) {
         type="number"
         min="1"
         value={quantity}
-        onChange={(event) => setQuantity(event.currentTarget.value)}
+        onChange={(event: ChangeEvent<HTMLInputElement>) =>
+          setQuantity(event.currentTarget.value)
+        }
       />
       <button
         data-test-id="product-add-to-cart"
@@ -29,5 +35,3 @@ function AddToCart(props) {
     </form>
   );
 }
-
-export default AddToCart;

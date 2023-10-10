@@ -15,7 +15,11 @@ export const metadata = {
   description: 'Lorem ipsum',
 };
 
-export default function RootLayout({ children }) {
+type LayoutProps = {
+  children: string;
+};
+
+export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body className={poppins.className}>
