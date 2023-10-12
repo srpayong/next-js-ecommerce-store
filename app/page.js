@@ -10,7 +10,7 @@ import { LiaShippingFastSolid } from 'react-icons/lia';
 import { RiCustomerService2Line } from 'react-icons/ri';
 import { getProducts } from '../database/products';
 import img1 from '../public/images/img1.jpeg';
-import img4 from '../public/images/img4.jpeg';
+import img12 from '../public/images/img12.jpeg';
 import styles from './page.module.scss';
 
 export const metadata = {
@@ -26,14 +26,14 @@ export default async function Home() {
     <main>
       <section className={styles.featuredProductsSection}>
         <div className={styles.featuredProductsTitle}>
-          <h4 className={playfairDisplay.className}>Featured Products</h4>
+          <h1 className={playfairDisplay.className}>Featured Products</h1>
           <Link className={styles.viewAllButton} href="/products">
             View All
           </Link>
         </div>
 
         <div className={styles.featuredProductsCards}>
-          {products.slice(8, 12).map((product) => {
+          {products.slice(5, 9).map((product) => {
             return (
               <div
                 key={`product-div-${product.id}`}
@@ -49,29 +49,11 @@ export default async function Home() {
                     className={styles.productImage}
                   />
                 </Link>
-                <Link href={`/products/${product.id}`}>
-                  <Image
-                    src={`/images/${product.name}.jpeg`}
-                    width={200}
-                    height={200}
-                    alt={product.name}
-                    priority={true}
-                    className={styles.productImage}
-                  />
-                </Link>
-                <div className={styles.productInfo}>
-                  <Link
-                    href={`/products/${product.id}`}
-                    className={styles.categoryTitle}
-                  >
-                    {product.category}
+                <div>
+                  <Link href={`/products/${product.id}`}>{product.name}</Link>
+                  <Link href={`/products/${product.id}`}>
+                    $ {product.price}
                   </Link>
-                  <div>
-                    <Link href={`/products/${product.id}`}>{product.name}</Link>
-                    <Link href={`/products/${product.id}`}>
-                      € {product.price}
-                    </Link>
-                  </div>
                 </div>
               </div>
             );
@@ -83,14 +65,14 @@ export default async function Home() {
         <div className={styles.collectionImageBox}>
           <Image
             className={styles.collectionImage1}
-            src={img4}
-            alt="image 4"
+            src={img1}
+            alt="image 1"
             priority={true}
           />
           <Image
             className={styles.collectionImage2}
-            src={img1}
-            alt="image 1"
+            src={img12}
+            alt="image 12"
             priority={true}
           />
         </div>

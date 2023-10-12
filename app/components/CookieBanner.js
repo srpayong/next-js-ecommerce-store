@@ -1,12 +1,12 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { getLocalStorage, setLocalStorage } from '../../LocalStorage';
 import { parseJson } from '../../util/json';
+import { getLocalStorage, setLocalStorage } from '../../util/LocalStorage';
 import styles from './CookieBanner.module.scss';
 
 export function CookieBanner() {
-  const [areCookiesTermsAccepted, setAreCookiesTermsAccepted] = useState(true);
+  const [areCookiesTermsAccepted, setAreCookiesTermsAccepted] = useState(false);
 
   useEffect(() => {
     const localStorageValue = getLocalStorage('cookiePolicy');
@@ -23,7 +23,7 @@ export function CookieBanner() {
         areCookiesTermsAccepted ? styles.closed : styles.open
       }`}
     >
-      <div>Accept all cookies</div>
+      <div>Do you accept the use of cookies?</div>
       <button
         className={styles.cookieAcceptButton}
         onClick={() => {

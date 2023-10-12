@@ -26,7 +26,6 @@
       cursor: pointer;
       padding: 4px 8px;
       border: 1px solid var(--primary-color);
-      border-radius: 5px;
       background-color: var(--primary-color);
       color: var(--main-bg-color);
 
@@ -84,7 +83,7 @@
 
     .productCard {
       border: 1px solid var(--primary-color);
-      border-radius: 5px;
+
       overflow: hidden;
 
       .productImage {
@@ -115,8 +114,6 @@
   }
 }
 
-// COLLECTION SECTION /////////////////
-
 .collectionSection {
   display: flex;
   gap: 40px;
@@ -127,20 +124,20 @@
     flex: 1;
 
     .collectionImage1 {
-      height: 300px;
-      width: 80%;
-      border: 10px solid #fff;
-      border-radius: 5px;
+      height: 400px;
+      width: 90%;
+      border: 8px solid #fff;
+      border-radius: 8px;
     }
 
     .collectionImage2 {
       position: absolute;
-      top: 45%;
-      left: 35%;
-      width: 200px;
-      height: 200px;
-      border: 7px solid #fff;
-      border-radius: 5px;
+      top: 60%;
+      left: 60%;
+      width: 180px;
+      height: 180px;
+      border: 8px solid #fff;
+      border-radius: 8px;
     }
   }
 
@@ -152,8 +149,7 @@
 
     h2 {
       font-family: var(--title-font);
-      font-size: 3rem;
-      font-style: italic;
+      font-size: 2rem;
       font-weight: 300;
     }
 

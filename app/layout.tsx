@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { BsHandbag } from 'react-icons/bs';
 import styles from '../app/components/NavBar.module.scss';
 import CartBadge from './components/CartBadge';
+import { CookieBanner } from './components/CookieBanner';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import SearchBar from './components/SearchBar';
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: LayoutProps) {
           </div>
         </div>
         {children}
+        <CookieBanner />
         <Footer />
       </body>
     </html>

@@ -2,8 +2,7 @@ import Image from 'next/image';
 import { getProducts } from '../../../database/products';
 import { getCookie } from '../../../util/cookies';
 import { parseJson } from '../../../util/json';
-
-// import styles from './checkout.module.scss';
+import styles from './checkout.module.scss';
 
 export const dynamic = 'force-dynamic';
 
@@ -34,22 +33,22 @@ export default async function OrderSummary() {
   );
 
   return (
-    <div>
+    <div className={styles.summaryContainer}>
       <h1>Order Summary</h1>
       {productsInCart.map((product) => {
         subTotal = product.quantity * product.price;
         return (
           <div key={`product-div-${product.id}`}>
-            <div>
+            <div className={styles.leftSide}>
               <Image
-                src={`/images/products/${product.name}.jpeg`}
+                src={`/images/${product.name}.jpeg`}
                 width={60}
                 height={60}
                 alt={product.name}
               />
             </div>
-            <div>
-              <p>
+            <div className={styles.infoContainer}>
+              <p className={styles.productTitle}>
                 {product.name} <span>[{product.category}]</span>
               </p>
               <div>
@@ -57,11 +56,11 @@ export default async function OrderSummary() {
                 <p>€ {product.price}</p>
               </div>
             </div>
-            <div>€{subTotal}</div>
+            <div className={styles.subTotal}>€{subTotal}</div>
           </div>
         );
       })}
-      <div>
+      <div className={styles.grandTotal}>
         <div>
           <p>Sub total:</p>
           <p>Shipping:</p>
@@ -70,8 +69,6 @@ export default async function OrderSummary() {
 
         <div>
           <p>€{totalPrice}</p>
-          <p>free</p>
-          <h3>€{totalPrice}</h3>
         </div>
       </div>
     </div>

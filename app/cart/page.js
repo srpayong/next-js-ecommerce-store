@@ -110,7 +110,11 @@ export default async function CartPage() {
                   href="/cart/checkout/"
                   data-test-id="cart-checkout"
                 >
-                  Checkout
+                  <div className={styles.cartButton}>
+                    <button name="checkout-button" data-test-id="cart-checkout">
+                      Checkout
+                    </button>
+                  </div>
                 </Link>
               </div>
             </div>

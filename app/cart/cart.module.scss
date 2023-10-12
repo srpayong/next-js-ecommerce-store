@@ -121,12 +121,14 @@
       }
 
       .checkoutButton {
-        background-color: #1f1f1f;
-        color: white;
+        background-color: var(--main-bg-color);
+        color: rgb(7, 7, 7);
+        font-size: 0.8rem;
 
         &:hover {
           background-color: var(--primary-color);
           outline: 1px solid var(--main-bg-color);
+          color: white;
         }
       }
     }

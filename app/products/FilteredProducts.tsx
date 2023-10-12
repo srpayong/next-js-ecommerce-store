@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { Product } from '../../migrations/00000-createTable';
+import { Product } from '../../migrations/00002-createTableProducts';
 import styles from './page.module.scss';
 
 export const dynamic = 'force-dynamic';
@@ -26,7 +26,7 @@ export default function FilterProducts({ products }: Props) {
     <main>
       <section className={styles.productOverviewContainer}>
         <div className={styles.productPageHeader}>
-          <h1>Shop our collection</h1>
+          <h1>Must-haves fall 2023</h1>
         </div>
 
         <div className={styles.categoryContainer}>
