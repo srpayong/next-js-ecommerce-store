@@ -4,8 +4,6 @@ import { getCookie } from '../../../util/cookies';
 import { parseJson } from '../../../util/json';
 import styles from './checkout.module.scss';
 
-export const dynamic = 'force-dynamic';
-
 export const metadata = {
   title: { default: 'Bliss' },
   description: 'Lorem Ipsum',
@@ -39,7 +37,7 @@ export default async function OrderSummary() {
         subTotal = product.quantity * product.price;
         return (
           <div key={`product-div-${product.id}`}>
-            <div className={styles.leftSide}>
+            <div>
               <Image
                 src={`/images/${product.name}.jpeg`}
                 width={60}
@@ -47,8 +45,8 @@ export default async function OrderSummary() {
                 alt={product.name}
               />
             </div>
-            <div className={styles.infoContainer}>
-              <p className={styles.productTitle}>
+            <div>
+              <p>
                 {product.name} <span>[{product.category}]</span>
               </p>
               <div>
@@ -56,11 +54,11 @@ export default async function OrderSummary() {
                 <p>€ {product.price}</p>
               </div>
             </div>
-            <div className={styles.subTotal}>€{subTotal}</div>
+            <div>€{subTotal}</div>
           </div>
         );
       })}
-      <div className={styles.grandTotal}>
+      <div>
         <div>
           <p>Sub total:</p>
           <p>Shipping:</p>

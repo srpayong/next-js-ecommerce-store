@@ -7,13 +7,12 @@ import { parseJson } from '../../util/json';
 // remove product from cart
 export async function removeItem(item) {
   const productQuantityCookie = getCookie('cart');
-  const productQuantities = !productQuantityCookie // parse the cookie
+  const productQuantities = !productQuantityCookie
     ? []
     : parseJson(productQuantityCookie);
-  // filter the arrays of items in the cart
-  // assign the filtered array to a new variable
+
   const removeFromCart = productQuantities.filter(
-    (product) => product.id !== item.id, // return a new array without the item that has been deleted
+    (product) => product.id !== item.id,
   );
   await cookies().set('cart', JSON.stringify(removeFromCart));
 }
@@ -48,8 +47,3 @@ export async function subtractQuantity(item) {
   }
   await cookies().set('cart', JSON.stringify(productQuantities));
 }
-
-// clear the cookie after submitting the form
-// export async function removeCookie() {
-//   await cookies().set('cart', JSON.stringify([]));
-// }

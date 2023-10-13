@@ -12,7 +12,6 @@ export function setLocalStorage(key: string, value: string) {
   }
 }
 
-
 // 'use client';
 
 // import React, { useEffect, useState } from 'react';

@@ -9,10 +9,10 @@ test('Test cart sum function', () => {
     },
     {
       price: 35,
-      quantity: 1,
+      quantity: 2,
     },
   ];
-  expect(getCartTotal(currentCart)).toBe(70);
+  expect(getCartTotal(currentCart)).toBe(105);
 });
 
 // Unit

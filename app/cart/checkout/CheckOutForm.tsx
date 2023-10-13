@@ -1,13 +1,8 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-// import { removeCookie } from '../actions';
 import { clearCookies } from './actions';
 import styles from './checkout.module.scss';
-
-// type CheckOutPageProps = {
-//   product: string;
-// };
 
 export default function CheckOutForm() {
   const router = useRouter();
@@ -23,12 +18,6 @@ export default function CheckOutForm() {
   const [month, setMonth] = useState('');
   const [year, setYear] = useState('');
   const [digit, setDigit] = useState('');
-
-  // const handleClick = (event: ChangeEvent<HTMLFormElement>) => {
-  //   event.preventDefault();
-  //   router.push('/cart/checkout/thankYou');
-  //   // await clearCookies;
-  // };
 
   return (
     <form className={styles.form}>

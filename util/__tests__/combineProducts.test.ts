@@ -14,10 +14,8 @@ test('Test function that combines the product data from the database with the pr
     },
   ];
 
-  // array that simulates data from a cookie
   const cookieData = [{ id: 1, quantity: 2 }];
 
-  // calls the function with productsData and cookieData as arguments
   const combineData = productData(productsData, cookieData);
 
   expect(combineData).toStrictEqual([

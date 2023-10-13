@@ -1,7 +1,6 @@
 import { expect, test } from '@playwright/test';
 
 test('cart test', async ({ page }) => {
-  // add to cart test
   await page.goto('http://localhost:3000/products/5');
 
   await page.getByTestId('product-add-to-cart').click();
