@@ -1,5 +1,5 @@
 import sjson from 'secure-json-parse';
-import { CookieQuantityItem } from '../app/products/[productId]/page';
+import { CookieQuantityItem } from '../app/components/CookieQuantityItem';
 
 export function parseJson(
   stringifiedJson: string,

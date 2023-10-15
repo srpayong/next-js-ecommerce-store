@@ -9,11 +9,6 @@ export const metadata = {
   description: 'Lorem Ipsum',
 };
 
-export type CookieQuantityItem = {
-  id: number;
-  quantity: number;
-};
-
 type Props = {
   params: { productId: string };
 };

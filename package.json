@@ -10,7 +10,6 @@
     "migrate": "ley --require tsm"
   },
   "dependencies": {
-    "css-loader": "^6.8.1",
     "dotenv": "^16.3.1",
     "dotenv-safe": "^8.2.0",
     "ley": "^0.8.1",
