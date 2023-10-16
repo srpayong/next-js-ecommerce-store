@@ -1,5 +1,10 @@
 import styles from './thankYou.module.scss';
 
+export const metadata = {
+  title: { default: 'Bliss' },
+  description: 'Lorem Ipsum',
+};
+
 export default function thankYouPage() {
   return (
     <main className={styles.thankyouContainer}>
