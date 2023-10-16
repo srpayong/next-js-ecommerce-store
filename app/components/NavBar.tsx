@@ -1,5 +1,4 @@
 'use client';
-'use client';
 import { Playfair_Display } from 'next/font/google';
 import Link from 'next/link';
 import { useState } from 'react';
