@@ -24,111 +24,113 @@ export default async function CartPage() {
   const productsInCart = productData(products, productQuantities);
 
   return (
-    <main>
+    <div>
       <header>
-        {productsInCart.length === 0 ? (
-          <h1 className={styles.emptyCart}>Your cart is empty</h1>
-        ) : (
-          <div className={styles.cartContainer}>
-            <div className={styles.cartOverviewContainer}>
-              <div className={styles.cartTableHead}>
-                <div>Image</div>
-                <div>Name</div>
-                <div>Price</div>
-                <div>Quantity</div>
-                <div>Total</div>
-                <div>Action</div>
-              </div>
+        <main>
+          {productsInCart.length === 0 ? (
+            <h1 className={styles.emptyCart}>Your cart is empty</h1>
+          ) : (
+            <div className={styles.cartContainer}>
+              <div className={styles.cartOverviewContainer}>
+                <div className={styles.cartTableHead}>
+                  <div>Image</div>
+                  <div>Name</div>
+                  <div>Price</div>
+                  <div>Quantity</div>
+                  <div>Total</div>
+                  <div>Action</div>
+                </div>
 
-              <div
-                className={styles.itemsInCart}
-                data-test-id={`cart-product-${products.id}`}
-              >
-                {productsInCart.map((product) => {
-                  let subTotal = 0;
-                  subTotal = product.quantity * product.price;
-                  return (
-                    <div
-                      key={`product-div-${product.id}`}
-                      className={styles.productCard}
-                    >
-                      <div>
-                        <Link href={`/products/${product.id}`}>
-                          <Image
-                            src={`/images/${product.name}.jpeg`}
-                            width={80}
-                            height={80}
-                            className={styles.productImage}
-                            alt={product.name}
-                          />
-                        </Link>
-                      </div>
-
-                      <div className={styles.infoContainer}>
-                        <div className={styles.productInfo}>
-                          <p className={styles.productName}>{product.name}</p>
-                          <p className={styles.productPrice}>
-                            € {product.price}
-                          </p>
-                        </div>
-
-                        <div className={styles.productQuantity}>
-                          <ChangeQuantity product={product} />
-
-                          <div className={styles.productSubtotal}>
-                            €{subTotal}
-                          </div>
-                        </div>
-                        <form
-                          data-test-id={`cart-product-remove-${product.id}`}
-                          name="remove-button"
-                          className={styles.actionButton}
-                        >
-                          <RemoveButton product={product} />
-                        </form>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-            <div className={styles.cartTotalContainer}>
-              <div className={styles.cartTotalCard}>
-                <h3>Cart Total:</h3>
                 <div
-                  data-test-id="cart-total"
-                  className={styles.grandTotalAmount}
+                  className={styles.itemsInCart}
+                  data-test-id={`cart-product-${products.id}`}
                 >
-                  €{getCartTotal(productsInCart)}
-                </div>
-                <div>
-                  <Link
-                    data-test-id="products-link"
-                    className={`${styles.continueShoppingButton} ${styles.cartButton}`}
-                    href="/products"
-                  >
-                    Continue Shopping
-                  </Link>
-                  <Link
-                    className={`${styles.checkoutButton} ${styles.cartButton}`}
-                    href="/cart/checkout/"
-                    data-test-id="cart-checkout"
-                  >
-                    <div className={styles.cartButton}>
-                      <button
-                        name="checkout-button"
-                        data-test-id="cart-checkout"
+                  {productsInCart.map((product) => {
+                    let subTotal = 0;
+                    subTotal = product.quantity * product.price;
+                    return (
+                      <div
+                        key={`product-div-${product.id}`}
+                        className={styles.productCard}
                       >
-                        Checkout
-                      </button>
-                    </div>
-                  </Link>
+                        <div>
+                          <Link href={`/products/${product.id}`}>
+                            <Image
+                              src={`/images/${product.name}.jpeg`}
+                              width={80}
+                              height={80}
+                              className={styles.productImage}
+                              alt={product.name}
+                            />
+                          </Link>
+                        </div>
+
+                        <div className={styles.infoContainer}>
+                          <div className={styles.productInfo}>
+                            <p className={styles.productName}>{product.name}</p>
+                            <p className={styles.productPrice}>
+                              € {product.price}
+                            </p>
+                          </div>
+
+                          <div className={styles.productQuantity}>
+                            <ChangeQuantity product={product} />
+
+                            <div className={styles.productSubtotal}>
+                              €{subTotal}
+                            </div>
+                          </div>
+                          <form
+                            data-test-id={`cart-product-remove-${product.id}`}
+                            name="remove-button"
+                            className={styles.actionButton}
+                          >
+                            <RemoveButton product={product} />
+                          </form>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className={styles.cartTotalContainer}>
+                <div className={styles.cartTotalCard}>
+                  <h3>Cart Total:</h3>
+                  <div
+                    data-test-id="cart-total"
+                    className={styles.grandTotalAmount}
+                  >
+                    €{getCartTotal(productsInCart)}
+                  </div>
+                  <div>
+                    <Link
+                      data-test-id="products-link"
+                      className={`${styles.continueShoppingButton} ${styles.cartButton}`}
+                      href="/products"
+                    >
+                      Continue Shopping
+                    </Link>
+                    <Link
+                      className={`${styles.checkoutButton} ${styles.cartButton}`}
+                      href="/cart/checkout/"
+                      data-test-id="cart-checkout"
+                    >
+                      <div className={styles.cartButton}>
+                        <button
+                          name="checkout-button"
+                          data-test-id="cart-checkout"
+                        >
+                          Checkout
+                        </button>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
+        </main>
       </header>
-    </main>
+    </div>
   );
 }

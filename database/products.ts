@@ -89,7 +89,7 @@ export const getProducts = cache(async () => {
 
 export const getProductById = cache(async (id: number) => {
   // postgres always returns an array
-  console.log({ id });
+  // console.log({ id });
   const [product] = await sql<Product[]>`
   SELECT * FROM products WHERE id = ${id}
   `;

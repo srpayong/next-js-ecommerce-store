@@ -25,7 +25,7 @@ export default function FruitsPage() {
     ? []
     : parseJson(fruitsCommentsCookie);
 
-  console.log(fruitComments);
+  // console.log(fruitComments);
 
   const fruitsWithComments = fruits.map((fruit) => {
     const matchingWithFruitFromCookie = fruitComments.find(

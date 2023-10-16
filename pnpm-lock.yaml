@@ -14,6 +14,9 @@ dependencies:
   jest-environment-jsdom:
     specifier: ^29.7.0
     version: 29.7.0
+  js-cookie:
+    specifier: ^3.0.5
+    version: 3.0.5
   ley:
     specifier: ^0.8.1
     version: 0.8.1
@@ -58,6 +61,9 @@ devDependencies:
   '@ts-safeql/eslint-plugin':
     specifier: ^2.0.3
     version: 2.0.3(eslint@8.50.0)(libpg-query@15.0.2)(typescript@5.2.2)
+  '@types/js-cookie':
+    specifier: ^3.0.4
+    version: 3.0.4
   '@types/node':
     specifier: ^20.8.2
     version: 20.8.4
@@ -1277,6 +1283,10 @@ packages:
     resolution: {integrity: sha512-kv43F9eb3Lhj+lr/Hn6OcLCs/sSM8bt+fIaP11rCYngfV6NVjzWXJ17owQtDQTL9tQ8WSLUrGsSJ6rJz0F1w1A==}
     dependencies:
       '@types/istanbul-lib-report': 3.0.1
+
+  /@types/js-cookie@3.0.4:
+    resolution: {integrity: sha512-vMMnFF+H5KYqdd/myCzq6wLDlPpteJK+jGFgBus3Da7lw+YsDmx2C8feGTzY2M3Fo823yON+HC2CL240j4OV+w==}
+    dev: true
 
   /@types/jsdom@20.0.1:
     resolution: {integrity: sha512-d0r18sZPmMQr1eG35u12FZfhIXNrnsPU/g5wvRKCUf/tOGilKKwYMYGqh33BNR6ba+2gkHw1EUiHoN3mn7E5IQ==}
@@ -4618,6 +4628,11 @@ packages:
       - babel-plugin-macros
       - supports-color
       - ts-node
+    dev: false
+
+  /js-cookie@3.0.5:
+    resolution: {integrity: sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==}
+    engines: {node: '>=14'}
     dev: false
 
   /js-tokens@4.0.0:

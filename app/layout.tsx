@@ -24,21 +24,23 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <div className={styles.topBanner}>
-          It's chilly outside, but our sale is heating up! 🔥
-        </div>
-        <div className={styles.navigationBar}>
-          <NavBar />
-          <div className={styles.cartContainer}>
-            <SearchBar />
-            <Link href="/cart" data-test-id="cart-link">
-              <BsHandbag className={styles.cartIcon} />
-              <div>
-                <CartBadge />
-              </div>
-            </Link>
+        <header>
+          <div className={styles.topBanner}>
+            It's chilly outside, but our sale is heating up! 🔥
           </div>
-        </div>
+          <div className={styles.navigationBar}>
+            <NavBar />
+            <div className={styles.cartContainer}>
+              <SearchBar />
+              <Link href="/cart" data-test-id="cart-link">
+                <BsHandbag className={styles.cartIcon} />
+                <div>
+                  <CartBadge />
+                </div>
+              </Link>
+            </div>
+          </div>
+        </header>
         {children}
         <CookieBanner />
         <Footer />
