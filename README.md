@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+<h1 align="left">Bliss</h1>
 
-First, run the development server:
+###
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<p align="left">Bliss is intricately designed to faithfully emulate the entire e-commerce shopping experience as a virtual storefront. It offers a lifelike simulation of real-world transactions while prioritizing user privacy and maintaining a secure browsing environment by abstaining from storing any personal data.</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+###
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+<h2 align="left">Key features include:</h2>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+###
 
-## Learn More
+<p align="left">- Users have the capability to explore a variety of products and utilize filters based on categories (e.g., women, children, men).<br>- Ordering products is streamlined, allowing users to seamlessly add items to the shopping cart.<br>- Users can easily adjust the quantity of selected products, both adding and subtracting as needed.<br>- Effortless removal of items from the shopping cart is facilitated.<br>- A convenient display in the navbar keeps users informed about the current number of items in their shopping cart.<br>- The checkout process is straightforward, enabling users to proceed from the shopping cart to the checkout page, where they can fill out a form and complete the order.</p>
 
-To learn more about Next.js, take a look at the following resources:
+###
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<h2 align="left">Technologies Used:</h2>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+###
 
-## Deploy on Vercel
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" height="40" alt="jest logo"  />
+  <img width="12" />
+  <img src="https://cdn.simpleicons.org/git/F05032" height="40" alt="git logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=postgres" height="40" alt="postgresql logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" height="40" alt="sass logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" height="40" alt="nextjs logo"  />
+</div>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+###
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<h2 align="left">Screenshots</h2>
+
+<img src="./public/screenshots/screenshot1.png" height="200" width="400">
+<img src="./public/screenshots/screenshot2.png" height="200" width="400">
+<img src="./public/screenshots/screenshot3.png" height="200" width="400">
+<img src="./public/screenshots/screenshot4.png" height="200" width="400">
+
+###
