@@ -81,7 +81,10 @@ import { Product } from '../migrations/00002-createTableProducts';
 export const getProducts = cache(async () => {
   // postgres always returns an array
   const products = await sql<Product[]>`
-  SELECT * FROM products
+    SELECT
+      *
+    FROM
+      products
   `;
 
   return products;
@@ -91,7 +94,12 @@ export const getProductById = cache(async (id: number) => {
   // postgres always returns an array
   // console.log({ id });
   const [product] = await sql<Product[]>`
-  SELECT * FROM products WHERE id = ${id}
+    SELECT
+      *
+    FROM
+      products
+    WHERE
+      id = ${id}
   `;
 
   return product;
