@@ -1,7 +1,7 @@
 import styles from './thankYou.module.scss';
 
 export const metadata = {
-  title: { default: 'Bliss' },
+  title: 'Bliss',
   description: 'Lorem Ipsum',
 };
 

@@ -2,19 +2,7 @@ import { readFileSync } from 'node:fs';
 import dotenv from 'dotenv';
 import postgres from 'postgres';
 
-// import { config } from 'dotenv-safe';
-// import { setEnvironmentVariables } from './util/config.mjs';
-
-// setEnvironmentVariables();
-
-// This file is used by node.js only
-
 export function setEnvironmentVariables() {
-  //   // Replacement for unmaintained dotenv-safe package
-  //   // https://github.com/rolodato/dotenv-safe/issues/128#issuecomment-1383176751
-  //   //
-  //   // TODO: Remove this and switch to dotenv/safe if this proposal gets implemented:
-  //   // https://github.com/motdotla/dotenv/issues/709
   dotenv.config();
 
   const unconfiguredEnvVars = Object.keys(
@@ -38,8 +26,11 @@ const sql = postgres(
 
 console.log(
   await sql`
-    SELECT * FROM products
-     `,
+    SELECT
+      *
+    FROM
+      products
+  `,
 );
 
 await sql.end();

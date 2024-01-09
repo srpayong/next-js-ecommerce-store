@@ -38,7 +38,6 @@ export default function CheckOutForm() {
           className={styles.name}
           value={lastName}
           onChange={(event) => setLastName(event.currentTarget.value)}
-          // required
         />
       </div>
 
@@ -48,7 +47,6 @@ export default function CheckOutForm() {
         placeholder="me@email.com"
         value={email}
         onChange={(event) => setEmail(event.currentTarget.value)}
-        // required
       />
 
       <div>
@@ -59,7 +57,6 @@ export default function CheckOutForm() {
           placeholder="Address"
           value={address}
           onChange={(event) => setAddress(event.currentTarget.value)}
-          // required
         />
 
         <div className={styles.addressContainer}>
@@ -85,7 +82,6 @@ export default function CheckOutForm() {
           placeholder="Country"
           value={country}
           onChange={(event) => setCountry(event.currentTarget.value)}
-          // required
         />
       </div>
       <div className={styles.paymentInfoContainer}>
@@ -96,7 +92,6 @@ export default function CheckOutForm() {
           placeholder="Credit Card Number"
           value={creditCard}
           onChange={(event) => setCreditCard(event.currentTarget.value)}
-          // required
         />
 
         <div className={styles.paymentInfo}>
@@ -131,7 +126,6 @@ export default function CheckOutForm() {
             onChange={(event) => setDigit(event.currentTarget.value)}
             data-test-id="checkout-credit-card"
             className={styles.threeDigit}
-            // required
           />
         </div>
       </div>

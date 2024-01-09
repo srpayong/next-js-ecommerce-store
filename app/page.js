@@ -60,6 +60,7 @@ export default async function Home() {
           })}
         </div>
       </section>
+
       {/* // THE COLLECTION SECTION */}
       <section className={styles.collectionSection}>
         <div className={styles.collectionImageBox}>
@@ -91,6 +92,7 @@ export default async function Home() {
           </Link>
         </div>
       </section>
+
       {/*  ICONS SECTION */}
       <section className={styles.highlightSection}>
         <div className={styles.highlight}>
@@ -114,6 +116,7 @@ export default async function Home() {
           <p>Free returns on qualifying orders</p>
         </div>
       </section>
+
       {/* CATEGORY SECTION */}
       <section className={styles.categorySection}>
         <h2 className={playfairDisplay.className}>Shop by Category</h2>

@@ -9,7 +9,6 @@ export function productData(products, productsInCookie) {
 
     // Create a new object by combining properties from item and productWithQuantities
     newItemsInCart.push({
-      // Spread properties
       ...item,
       ...productWithQuantities,
     });

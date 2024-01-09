@@ -6,5 +6,3 @@ export default function RootError() {
     <div className={styles.errorMessage}> Oops! Something went wrong. </div>
   );
 }
-
-// for all error//

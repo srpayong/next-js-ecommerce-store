@@ -4,7 +4,6 @@ import styles from './NavBar.module.scss';
 
 interface CartItem {
   quantity: number;
-  // Other properties if applicable
 }
 
 export default function CartBadge() {
